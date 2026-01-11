@@ -68,19 +68,44 @@
 // }
 
 
+// #include <iostream>
+// #include <vector>
+
+// int main()
+// {
+//     std::vector <std::string> languages ={"c", "c++", "js"};
+//     std::vector <std::string>::iterator itr;
+
+//     itr = languages.begin();
+//     while(itr != languages.end())
+//     {
+//         std::cout <<*itr<<std::endl;
+//         itr++;
+//     }
+//     return (0);
+// }
+
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main()
-{
-    std::vector <std::string> languages ={"c", "c++", "js"};
-    std::vector <std::string>::iterator itr;
+{ 
+    int a = 10, b = 1;
+    
+    std::cout <<"Minimo entre " << a << "e " <<b << " : " << std::min(a, b)  << std::endl;
+    std::vector<int> numbers ={1, 2, 3, 4};
 
-    itr = languages.begin();
-    while(itr != languages.end())
-    {
-        std::cout <<*itr<<std::endl;
-        itr++;
-    }
+    auto it_min = std::min_element(numbers.begin(), numbers.end());
+    auto it_max = std::max_element(numbers.begin(), numbers.end());
+    std::cout <<"Minino do container: "<< *it_min <<std::endl;
+    std::cout <<"Maximo do container: "<<*it_max <<std::endl;
+
+    std::cout <<"Usando minmax_element "<<std::endl;
+
+    auto par_minmax = std::minmax_element(numbers.begin(), numbers.end());
+    std::cout << *par_minmax.first<<std::endl;
+    std::cout << *par_minmax.second<<std::endl;
+
     return (0);
 }
