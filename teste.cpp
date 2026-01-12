@@ -1,17 +1,17 @@
-//#include <iostream>
-//#include <vector>
+// #include <iostream>
+// #include <vector>
 
-    // int main()
-    // {
-    //     std::vector<int> numbers = {1, 100, 10 ,11};
-    //     std::cout <<"Numbers are: ";
+// int main()
+// {
+//     std::vector<int> numbers = {1, 100, 10 ,11};
+//     std::cout <<"Numbers are: ";
 
-    //     for(auto &num: numbers)
-    //     {
-    //         std::cout << num <<std::endl;
-    //     }
-    //     return (0);
-    // }
+//     for(auto &num: numbers)
+//     {
+//         std::cout << num <<std::endl;
+//     }
+//     return (0);
+// }
 
 // #include <iostream>
 // #include <set>
@@ -28,7 +28,6 @@
 //     return (0);
 // }
 
-
 // #include <iostream>
 // #include <unordered_set>
 // using namespace std;
@@ -40,7 +39,7 @@
 
 //   // print the set
 //   cout << "Numbers are: ";
-  
+
 //   for(auto &num: numbers) {
 //     cout << num << ", ";
 //   }
@@ -67,7 +66,6 @@
 //     return (0);
 // }
 
-
 // #include <iostream>
 // #include <vector>
 
@@ -85,27 +83,42 @@
 //     return (0);
 // }
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+
+// int main()
+// {
+//     int a = 10, b = 1;
+
+//     std::cout <<"Minimo entre " << a << "e " <<b << " : " << std::min(a, b)
+//     << std::endl; std::vector<int> numbers ={1, 2, 3, 4};
+
+//     auto it_min = std::min_element(numbers.begin(), numbers.end());
+//     auto it_max = std::max_element(numbers.begin(), numbers.end());
+//     std::cout <<"Minino do container: "<< *it_min <<std::endl;
+//     std::cout <<"Maximo do container: "<<*it_max <<std::endl;
+
+//     std::cout <<"Usando minmax_element "<<std::endl;
+
+//     auto par_minmax = std::minmax_element(numbers.begin(), numbers.end());
+//     std::cout << *par_minmax.first<<std::endl;
+//     std::cout << *par_minmax.second<<std::endl;
+
+//     return (0);
+// }
+
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <stack>
+int main() 
+{
+  std::stack<std::string> nomes;
+  nomes.push("Domingos");
 
-int main()
-{ 
-    int a = 10, b = 1;
-    
-    std::cout <<"Minimo entre " << a << "e " <<b << " : " << std::min(a, b)  << std::endl;
-    std::vector<int> numbers ={1, 2, 3, 4};
+  std::cout <<nomes.top() <<std::endl;
+  std::cout <<"--------------------"<<std::endl;
 
-    auto it_min = std::min_element(numbers.begin(), numbers.end());
-    auto it_max = std::max_element(numbers.begin(), numbers.end());
-    std::cout <<"Minino do container: "<< *it_min <<std::endl;
-    std::cout <<"Maximo do container: "<<*it_max <<std::endl;
-
-    std::cout <<"Usando minmax_element "<<std::endl;
-
-    auto par_minmax = std::minmax_element(numbers.begin(), numbers.end());
-    std::cout << *par_minmax.first<<std::endl;
-    std::cout << *par_minmax.second<<std::endl;
-
-    return (0);
+  std::stack<int> numbers;
+  
+  return (0);
 }
